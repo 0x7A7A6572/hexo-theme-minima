@@ -10,6 +10,15 @@
         <% } %>
     </div>
 
+    <% if (theme.beian_info) { %>
+      <div style="width:300px;font-size: 0.5em;text-align: center;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010502000772" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;background-image: none;">
+          <img src="images/beian.png" style="float:left;box-shadow: none;">
+          <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"><%- theme.beian_info %></p>
+        </a>
+      </div>
+    <% } %>
+
     <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
     <!-- 移动至sidebar -->
     <!-- <div class="four columns mb-3 posisi" >
