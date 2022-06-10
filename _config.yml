@@ -12,12 +12,12 @@ desc: ""
 #menu
 menu:
   # Works: /Works
-  艺术作品: /Artwork
-  开发应用: /DevApp
+  创作: /Artwork
+  开发: /DevApp
   关于: /About
 
 #index/main page max show posts (in number)
-max_post: 4
+max_post: 6
 
 # Colors use hex color without #
 # Theme color
@@ -30,18 +30,34 @@ usercss: css/user.css
 
 # social profile at the footer/bottom
 footer: true
-placename: Earth
-placelink: https://en.wikipedia.org/wiki/Earth
+placename: minima
+placelink: https://github.com/adisaktijrs/hexo-theme-minima
 github: https://github.com/0x7A7A6572
+bilibili: https://space.bilibili.com/3740018
+tencent: http://wpa.qq.com/msgrd?v=3&uin=2623385294&site=qq&menu=yes
+pixiv: https://www.pixiv.net/users/11023636
 # linkedin: https://linkedin.com/in/adisaktijrs
 # twitter: https://twitter.com/adisaktijrs
 # instagram: https://instagram.com/adisaktijrs
 # stackoverflow: https://stackoverflow.com/story/tobiasreithmeier
 
+#左边侧栏
+sidebar: 
+  enable: true
+  theme_switch: true
+  to_top: true
+  emil: true
+  conversation_link: http://wpa.qq.com/msgrd?v=3&uin=2623385294&site=qq&menu=yes
+  community: 
+    github: https://github.com/0x7A7A6572
+    bilibili: https://space.bilibili.com/3740018
+    pixiv: https://www.pixiv.net/users/11023636
+    
+
 # Misc
 nanobar: /js/nanobar.min.js
-switch_light: "👀"
-switch_dark: "👀"
+switch_light: "1/0"
+switch_dark: "0/1"
 
 # Picture enlargement
 picjs: /js/pic.min.js
@@ -53,6 +69,7 @@ thumbnail: /images/thumbnail.jpg
 
 article:
   thumbnail: true
+
 
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
 disqus_enabled: false

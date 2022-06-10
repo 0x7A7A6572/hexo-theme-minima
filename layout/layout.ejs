@@ -99,6 +99,8 @@
   <%- css('css/custom.css') %>
   <%- css('css/prism-dark.css') %>
   <%- css('css/prism-line-numbers.css') %>
+  <%- css('css/webfont.css') %>
+
   <!-- User css -->
   <% if (theme.usercss) { %>
   <%- css(theme.usercss) %>
@@ -130,7 +132,7 @@
   <div class="container">
     <div class="row">
       <div>
-
+        <div id="top" ></div>
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>
@@ -140,7 +142,7 @@
       </div>
 
     </div>
-
+    <%- partial('partial/side_toolbar') %>
   </div>
   <script src="<%- theme.nanobar %>"></script>
 

@@ -1,33 +1,33 @@
 /* dm-serif-display-regular - latin */
 /* @font-face { */
-  /* font-family: 'DM Serif Display'; */
-  /* font-style: normal; */
-  /* font-weight: 400; */
-  /* src: url('../fonts/dm-serif-display-v4-latin-regular.eot'); IE9 Compat Modes */
-  /* src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'), */
-       /* url('../fonts/dm-serif-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-       /* url('../fonts/dm-serif-display-v4-latin-regular.woff2') format('woff2'), Super Modern Browsers */
-       /* url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), Modern Browsers */
-       /* url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
-       /* url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); Legacy iOS */
+/* font-family: 'DM Serif Display'; */
+/* font-style: normal; */
+/* font-weight: 400; */
+/* src: url('../fonts/dm-serif-display-v4-latin-regular.eot'); IE9 Compat Modes */
+/* src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'), */
+/* url('../fonts/dm-serif-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+/* url('../fonts/dm-serif-display-v4-latin-regular.woff2') format('woff2'), Super Modern Browsers */
+/* url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), Modern Browsers */
+/* url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
+/* url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); Legacy iOS */
 
-  /* font-display: swap; Add font-display */
+/* font-display: swap; Add font-display */
 /* } */
 
 /* inter-regular - latin */
 /* @font-face { */
-  /* font-family: 'Inter'; */
-  /* font-style: normal; */
-  /* font-weight: 400; */
-  /* src: url('../fonts/inter-v2-latin-regular.eot'); IE9 Compat Modes */
-  /* src: local(''), */
-       /* url('../fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-       /* url('../fonts/inter-v2-latin-regular.woff2') format('woff2'), Super Modern Browsers */
-       /* url('../fonts/inter-v2-latin-regular.woff') format('woff'), Modern Browsers */
-       /* url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
-       /* url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); Legacy iOS */
+/* font-family: 'Inter'; */
+/* font-style: normal; */
+/* font-weight: 400; */
+/* src: url('../fonts/inter-v2-latin-regular.eot'); IE9 Compat Modes */
+/* src: local(''), */
+/* url('../fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+/* url('../fonts/inter-v2-latin-regular.woff2') format('woff2'), Super Modern Browsers */
+/* url('../fonts/inter-v2-latin-regular.woff') format('woff'), Modern Browsers */
+/* url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
+/* url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); Legacy iOS */
 
-  /* font-display: swap; Add font-display */
+/* font-display: swap; Add font-display */
 /* } */
 
 html {
@@ -43,6 +43,7 @@ img {
 }
 
 @media (min-width: 550px) {
+
   /*
   Side by side gallery
   use with </> alignment
@@ -97,7 +98,8 @@ img {
 }
 
 .ml-1 {
-  margin-left: 5rem;
+  margin-left: 0rem;
+  /* margin-left: 5rem; 主题切换移动到toolbar*/
 }
 
 .bottom {
@@ -138,16 +140,26 @@ img {
   margin: auto;
 }
 
+.mt-downplay {
+  color: gray;
+}
+
 .mode {
   position: absolute;
   display: block;
   cursor: pointer;
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
@@ -183,7 +195,7 @@ body.darkmode code:not(pre code) {
 /* blockquote */
 blockquote {
   font-family: 'Inter';
-  background-color: rgba(148, 148, 149, 0.08) ;
+  background-color: rgba(148, 148, 149, 0.08);
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
   font-style: italic;
@@ -210,6 +222,7 @@ blockquote footer cite:before {
 ::-webkit-scrollbar-thumb {
   background: rgb(128 128 128 / 70%);
 }
+
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(128 128 128 / 20%);
 }
@@ -227,6 +240,7 @@ a.footer-link:focus {
 .svg-hov {
   transition: all .2s ease-in-out;
 }
+
 .svg-hov:hover {
   transform: translateY(-3px);
   transition: all .2s ease-in-out;
@@ -242,18 +256,31 @@ a.footer-link:focus {
 .github {
   fill: #63636F;
 }
+
 .linkedin {
   fill: #0073b1;
 }
+
+.pixiv {
+  fill: #0073b1;
+}
+
+.bilibili{
+  fill: #ee768c
+}
+
 .twitter {
   fill: #1DA1F2;
 }
+
 .instagram {
   fill: #E4405F
 }
+
 .stackoverflow {
   fill: #ca7516;
 }
+
 .nanobar {
   left: 0;
 }
@@ -320,4 +347,35 @@ body.darkmode {
     text-align: left;
   }
 
+}
+
+.side-toolbar {
+  position: fixed;
+  left: 0px;
+  top: 20px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-toolbar a.option-box,
+.side-toolbar div.option-box {
+   /* 35=body(10+5)+contenrt(20)*/
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.side-toolbar div.option-box-contact {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+}
+
+.ml-sidebar {
+  margin-top: 0.7rem;
 }
