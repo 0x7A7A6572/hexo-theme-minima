@@ -1,0 +1,14 @@
+<% if(theme.content_inner.avatar) { %>
+<img class="avatar" src="<%- theme.content_inner.avatar%>" alt="<%- theme.content_inner.name%>'s Github chart" />
+<h3><%- theme.content_inner.name%></h3>
+<div class="column">
+  <!-- Main information, edit it on theme/_config.yml -->
+  <p class="mb-2"><%= theme.owner %></p>
+  <p class="profile" id="motto"><%= theme.info %></p>
+  <p><%= theme.desc %></p>
+</div>
+<% } %>
+
+<% if(theme.github_heatmap.enable) { %>
+<img src="https://ghchart.rshah.org/<%- theme.github_heatmap.hexcolor%>/<%- theme.github_heatmap.user%>" alt="<%- theme.github_heatmap.user%>'s Github chart" />
+<% } %>

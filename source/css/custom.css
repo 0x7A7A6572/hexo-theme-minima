@@ -286,6 +286,7 @@ a.footer-link:focus {
 }
 
 body {
+  display: flex;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -334,7 +335,72 @@ body.darkmode {
   text-align: center;
 }
 
+
+
+
+.side-toolbar {
+  position: fixed;
+  left: 0px;
+  top: 20px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  width: 10%;
+  max-width: 2.0em;
+}
+
+.side-toolbar a.option-box,
+.side-toolbar div.option-box {
+   /* 35=body(10+5)+contenrt(20)*/
+  cursor: pointer;
+  text-align: center;
+}
+
+.side-toolbar div.option-box-contact {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+}
+
+.side-toolbar div.option-box-contact a svg{
+  width: 1.0em;
+}
+
+.ml-sidebar {
+  margin-top: 0.7rem;
+}
+
+.content-inner{
+  margin: 50px 50px 50px 2.0em;
+  text-align: center;
+  min-width: 12.0em;
+}
+
+.avatar{
+  width: 30%;
+  border-radius: 32%;
+}
+
+.profile {
+  font-size: 0.5em;
+  border-radius: 1.0em;
+  background-color: #d8d8d8;
+  padding: 1.0em;
+  font-weight: bold;
+}
+
+.profile.darkmode {
+  background-color: slategray;
+}
+
+/* pc */
 @media (min-width: 550px) {
+  body {
+    flex-direction: row;
+  }
   .posisi {
     text-align: right;
   }
@@ -349,33 +415,16 @@ body.darkmode {
 
 }
 
-.side-toolbar {
-  position: fixed;
-  left: 0px;
-  top: 20px;
-  bottom: 10px;
-  display: flex;
-  flex-direction: column;
+/* mobile */
+@media (max-width: 550px) {
+  body {
+    flex-direction: column;
+  }
+  /* .content-inner{
+    display: none;
+  } */
+  .container {
+    margin: 0 auto;
+    padding: 0 10%;
 }
-
-.side-toolbar a.option-box,
-.side-toolbar div.option-box {
-   /* 35=body(10+5)+contenrt(20)*/
-  height: 35px;
-  width: 35px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.side-toolbar div.option-box-contact {
-  display: flex;
-  flex-direction: column;
-  width: 35px;
-  cursor: pointer;
-  text-align: center;
-  margin-top: auto;
-}
-
-.ml-sidebar {
-  margin-top: 0.7rem;
 }

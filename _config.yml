@@ -74,3 +74,17 @@ article:
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
 disqus_enabled: false
 disqus_shortname: https-adisaktijrs-github-io
+
+#content-inner
+content_inner:
+   enable: true
+   avatar: /images/favicon.png
+   name: zzerX
+   motto: "✨Everything that drowns me makes me wanna fly."
+
+#github热力图
+github_heatmap:
+  enable: false
+  user: "0x7A7A6572"
+  hexcolor: 03adfc
+

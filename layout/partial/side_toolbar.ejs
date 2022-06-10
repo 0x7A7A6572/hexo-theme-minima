@@ -1,6 +1,6 @@
 <!-- 侧边栏 -->
 <% if (theme.sidebar.enable) { %>
-<div class="side-toolbar">
+<aside class="side-toolbar">
   <% if (theme.sidebar.theme_switch) { %>
   <a class="option-box" href="javascript:void(0)" title="主题切换" aria-label="主题切换">
     <div class="icon dripicons-brightness-medium" onclick=setDarkMode(!getThemeStatus()) id="darkBtn"></div>
@@ -106,6 +106,8 @@
         localStorage.removeItem('preferredTheme');
       }
       document.body.classList.toggle("darkmode");
+      document.getElementById("motto").classList.toggle("darkmode");
+
     }
 
     function getThemeStatus() {
@@ -116,5 +118,5 @@
       }
     }
   </script>
-</div>
+</aside>
 <% } %>
