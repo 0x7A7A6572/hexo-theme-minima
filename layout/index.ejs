@@ -1,12 +1,17 @@
 <!-- <div class="row"> -->
-  <!-- <div class="column"> -->
-    <!-- Main information, edit it on theme/_config.yml -->
-    <!-- <p class="mb-2"><%= theme.owner %></p> -->
-    <!-- <p class="profile"><%= theme.info %></p> -->
-    <!-- <p><%= theme.desc %></p> -->
-  <!-- </div> -->
+<!-- <div class="column"> -->
+<!-- Main information, edit it on theme/_config.yml -->
+<!-- <p class="mb-2"><%= theme.owner %></p> -->
+<!-- <p class="profile"><%= theme.info %></p> -->
+<!-- <p><%= theme.desc %></p> -->
 <!-- </div> -->
-
+<!-- </div> -->
+<script>
+  function getPostColor(postName){
+    console.log("????")
+    return postName;
+  }
+</script>
 <h4>最近</h4>
 
 <% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
@@ -16,15 +21,28 @@
     <p class="bottom"><%- full_date(post.date, 'll') %></p>
   </div>
   <div class="nine columns left mb-3">
-    <a href="<%- url_for(post.path) %>" >
+    <a href="<%- url_for(post.path) %>">
       <% if (post.title == "") { %>
-        no title
+      no title
       <% } else { %>
-        <%- post.title %>
+      <%- post.title %>
       <% } %>
     </a>
+    <% if (post.tags.length > 0) { %>
+    <div class="post-tag">
+      <% post.tags.map((tag) => { %>
+      <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
+        <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
+        <% if (theme.post_tag.style != "simble") { %>
+        <span class="item-text"><%- tag.name %></span>
+        <% } %>
+      </div>
+      <% }) %>
+    </div>
+    <% } %>
   </div>
 </div>
 <% }) %>
+
 
 <h4> <a href="<%= config.root %>archives">所有博客</a></h4>

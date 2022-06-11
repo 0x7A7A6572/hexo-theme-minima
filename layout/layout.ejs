@@ -130,7 +130,10 @@
 
 <body>
   <nav class="content-inner">
+    <!-- || document.body.offsetWidth >= 500 -->
+    <% if (!is_post()  ) { %>
     <%- partial('partial/content_inner') %>
+    <% } %> 
   </nav>
   <div class="container">
     <div class="row">

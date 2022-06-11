@@ -355,6 +355,7 @@ body.darkmode {
    /* 35=body(10+5)+contenrt(20)*/
   cursor: pointer;
   text-align: center;
+  padding-top: 0.2em;
 }
 
 .side-toolbar div.option-box-contact {
@@ -373,10 +374,20 @@ body.darkmode {
   margin-top: 0.7rem;
 }
 
+.aside-name{
+  background-image: none !important;
+}
+
+ .aside-name img{
+  box-shadow: none;
+  width: 0.8em;
+}
+
 .content-inner{
-  margin: 50px 50px 50px 2.0em;
+  margin: 50px 50px 0px 2.0em;
   text-align: center;
   min-width: 12.0em;
+  max-width: 18.0em;
 }
 
 .avatar{
@@ -385,15 +396,53 @@ body.darkmode {
 }
 
 .profile {
-  font-size: 0.5em;
   border-radius: 1.0em;
-  background-color: #d8d8d8;
+  background-color: #f1eeee;
   padding: 1.0em;
   font-weight: bold;
 }
 
 .profile.darkmode {
   background-color: slategray;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+}
+
+figure#top {
+  margin: 0;
+  padding: 0;
+}
+
+/* 标签 */
+.post-tag {
+  display: flex;
+}
+.post-tag-item{
+  line-height: 1;
+  height: fit-content;
+  width: fit-content;
+  padding: 0.2em 0.2em 0.2em 0em;
+  border-radius: 0.2em;
+  margin-left: 0.5em;
+  display: flex;
+  justify-content: top;
+  text-align: top;
+  background-color: #00de485c; /* defult*/
+  min-width: 0.5em; /* style = simble */
+}
+.item-head{
+  width: 0.2em;
+  border-radius: 0.5em;
+  background-color: #0fdc00; /* defult*/
+}
+.item-text{
+  text-align: center;
+  text-align: center;
+  font-size: 0.8em;
+  margin-left: 0.3em;
 }
 
 /* pc */

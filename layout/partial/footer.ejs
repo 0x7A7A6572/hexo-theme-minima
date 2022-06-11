@@ -1,19 +1,19 @@
-<div class="row mt-2">
+<footer class="row mt-2">
   <% if (theme.footer) { %>
     <div class="eight columns mt-downplay">
-      <p id="madewith">Blog Engine
+      <p id="madewith">Hexo
         <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
         <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
         </a>
         <% if (theme.placename && theme.placelink) { %>
-         - Theme From <a href="<%- theme.placelink %>" target="_blank" rel="noreferrer"><%- theme.placename %></a>.</p>
+         | theme - <a href="<%- theme.placelink %>" target="_blank" rel="noreferrer"><%- theme.placename %></a>.</p>
         <% } %>
     </div>
 
     <% if (theme.beian_info) { %>
-      <div style="width:300px;font-size: 0.5em;text-align: center;">
+      <div style="width:300px;text-align: center;">
         <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010502000772" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;background-image: none;">
-          <img src="images/beian.png" style="float:left;box-shadow: none;">
+          <img src="<%- url_for('/images/beian.png') %>" style="float:left;box-shadow: none;">
           <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"><%- theme.beian_info %></p>
         </a>
       </div>
@@ -54,4 +54,4 @@
 
     </div> -->
   <% } %>
-</div>
+</footer>

@@ -1,10 +1,13 @@
 <% if(theme.content_inner.avatar) { %>
 <img class="avatar" src="<%- theme.content_inner.avatar%>" alt="<%- theme.content_inner.name%>'s Github chart" />
-<h3><%- theme.content_inner.name%></h3>
+<h3><%- theme.content_inner.name%>
+  <a class="aside-name" href="/admin">
+  <img src="<%- url_for("images/admin.png") %>"/>
+</a></h3>
 <div class="column">
   <!-- Main information, edit it on theme/_config.yml -->
   <p class="mb-2"><%= theme.owner %></p>
-  <p class="profile" id="motto"><%= theme.info %></p>
+  <p class="profile" id="motto"><%= theme.content_inner.motto %></p>
   <p><%= theme.desc %></p>
 </div>
 <% } %>

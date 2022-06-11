@@ -1,3 +1,55 @@
+# Modify
+ 基于Minima
+ 添加：
+ - sidebar 侧边工具栏
+ - content_inner 内容侧栏显示
+ - 文章标签显示
+ - 备案显示
+修改：
+ - 字体样式（不使用字体）
+ - 一些页面排版
+ - 一些标签改为h5推荐标签
+
+_config.yml 加入这些配置：
+```yml
+#左边侧栏
+sidebar: 
+  enable: true
+  theme_switch: true
+  to_top: true
+  emil: true
+  conversation_link: # 会话连接 https://....
+  community: 
+    github:          #  https://....
+    bilibili:        #  https://....
+    pixiv:           #  https://....
+    
+#content-inner
+content_inner:
+   enable: true
+   avatar: /images/favicon.png
+   name: zzerX
+   motto: "✨Everything that drowns me makes me wanna fly."
+
+#github热力图
+github_heatmap:
+  enable: false
+  user: "0x7A7A6572"
+  hexcolor: 03adfc
+
+#tag显示配置
+post_tag:
+   enable: true
+   style: "defult" # defult or simble(only display color)
+   bind_color:
+     tagname1: 0fdc00
+     lua: 0fdc00
+     java: dc0f00
+     js: 0FA0CE
+     linux: dc550f
+     h5: 00bedc
+
+```
 # Minima
 An undoubtedly simple and lightweight dark/light mode theme for Hexo.
 
