@@ -1,14 +1,16 @@
 # Modify
- 基于Minima
+ 基于[Minima-v2.0](https://github.com/adisaktijrs/hexo-theme-minima) 改动，演示页面:[点击跳转](https://zzerx.cn).
+ 
  添加：
- - sidebar 侧边工具栏
- - content_inner 内容侧栏显示
- - 文章标签显示
- - 备案显示
-修改：
- - 字体样式（不使用字体）
- - 一些页面排版
- - 一些标签改为h5推荐标签
+  - sidebar 侧边工具栏
+  - content_inner 内容侧栏显示
+  - 文章标签显示
+  - 备案显示
+
+ 修改：
+  - 字体样式（不使用字体）
+  - 一些页面排版
+  - 一些标签改为h5推荐标签
 
 _config.yml 加入这些配置：
 ```yml
@@ -50,6 +52,18 @@ post_tag:
      h5: 00bedc
 
 ```
+<div style='display: none'>
+### 现在的页面
+
+![pc](./source/images/minima_x_pc.png);
+
+![mobile](./source/images/minima_x_mobile.png);
+</div>
+
+
+    
+
+
 # Minima
 An undoubtedly simple and lightweight dark/light mode theme for Hexo.
 
