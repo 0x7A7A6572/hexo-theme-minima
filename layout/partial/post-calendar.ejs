@@ -1,0 +1,122 @@
+
+        <div id="post-calendar" class="card-content">
+        <!-- <div style="font-weight: bold;font-size: 1.1em;"><%= theme.postCalendar.title %></div> -->
+        </div>
+<style type="text/css">
+  #post-calendar {
+        /* width: 100%; */
+        height: 180px;
+        border-radius: 12px;
+        display: flex;
+        padding: 0.2em;
+       /* background-color: rgb(255, 255, 255,0.5);*/
+    }
+</style>
+
+<script type="text/javascript" src="<%= theme.libs.js.echarts %>"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
+
+    <%
+    // calculate range.
+    var startDate = moment().subtract(theme.postCalendar.range , 'months');
+    var endDate = moment();
+    var rangeArr =  '["' + startDate.format('YYYY-MM-DD') + '", "' + endDate.format('YYYY-MM-DD') + '"]';
+
+    // post and count map.
+    var dateMap = new Map();
+    site.posts.forEach(function (post) {
+        var date = post.date.format('YYYY-MM-DD');
+        var count = dateMap.get(date);
+        dateMap.set(date, count == null || count == undefined ? 1 : count + 1);
+    });
+
+    // loop the data for the current year, generating the number of post per day
+    var i = 0;
+    var datePosts = '[';
+    var dayTime = 3600 * 24 * 1000;
+    for (var time = startDate; time <= endDate; time += dayTime) {
+        var date = moment(time).format('YYYY-MM-DD');
+        datePosts = (i === 0 ? datePosts + '["' : datePosts + ', ["') + date + '", ' +
+            (dateMap.has(date) ? dateMap.get(date) : 0) + ']';
+        i++;
+    }
+    datePosts += ']'; %>
+
+    let option = {
+        title: {
+            show: true,
+            top: 0,
+            text: "<%= theme.postCalendar.title %>",
+            left: 'center',
+            textStyle: {
+                 color: '#<%= theme.postCalendar.titleColor %>'
+            }
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
+        },
+        visualMap: {
+            show: true,
+            showLabel: false,
+            categories: [<%- theme.postCalendar.visualMapCategories %>],
+            calculable: false,
+            inRange: {
+                symbol: 'rect',
+                color: [<%- theme.postCalendar.visualMapColor %>]
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            bottom: 0
+        },
+        calendar: [{
+            range: <%- rangeArr %>,
+            left: "center",
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                // width: '1.88679%',
+                // height: '15px',
+              color: '#2b2b2b00',
+             borderColor: '#00000000',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                color: "#3C4858",
+                nameMap: 'cn',
+                fontWeight: 'lighter',
+                fontSize: 12
+            },
+            dayLabel: {
+                show: false,
+                color: "#3C4858",
+                formatter: '{start}  1st',
+                fontWeight: 'lighter',
+                nameMap: ['日',' ',' ','三',' ',' ','六',],
+                fontSize: 12
+            }
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: <%- datePosts %>
+        }]
+
+    };
+
+    myChart.setOption(option);
+</script>
