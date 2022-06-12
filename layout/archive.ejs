@@ -16,6 +16,18 @@
               <%- post.title %>
             <% } %>
           </a>
+          <% if (post.tags.length > 0) { %>
+            <div class="post-tag">
+              <% post.tags.map((tag) => { %>
+              <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
+                <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
+                <% if (theme.post_tag.style != "simble") { %>
+                <span class="item-text"><%- tag.name %></span>
+                <% } %>
+              </div>
+              <% }) %>
+            </div>
+            <% } %>
         </div>
       </div>
     </article>

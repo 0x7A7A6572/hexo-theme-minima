@@ -6,12 +6,7 @@
 <!-- <p><%= theme.desc %></p> -->
 <!-- </div> -->
 <!-- </div> -->
-<script>
-  function getPostColor(postName){
-    console.log("????")
-    return postName;
-  }
-</script>
+
 <h4>最近</h4>
 
 <% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
@@ -31,7 +26,7 @@
     <% if (post.tags.length > 0) { %>
     <div class="post-tag">
       <% post.tags.map((tag) => { %>
-      <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
+      <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;" title="<%- tag.name %>">
         <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
         <% if (theme.post_tag.style != "simble") { %>
         <span class="item-text"><%- tag.name %></span>

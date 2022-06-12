@@ -246,6 +246,10 @@ a.footer-link:focus {
   transition: all .2s ease-in-out;
 
 }
+.defult-a {
+text-decoration-color: #000000 !important;
+ background-image: none !important;
+}
 
 .hexo {
   fill: #03adfc;
@@ -265,7 +269,7 @@ a.footer-link:focus {
   fill: #0073b1;
 }
 
-.bilibili{
+.bilibili {
   fill: #ee768c
 }
 
@@ -352,7 +356,7 @@ body.darkmode {
 
 .side-toolbar a.option-box,
 .side-toolbar div.option-box {
-   /* 35=body(10+5)+contenrt(20)*/
+  /* 35=body(10+5)+contenrt(20)*/
   cursor: pointer;
   text-align: center;
   padding-top: 0.2em;
@@ -366,7 +370,7 @@ body.darkmode {
   margin-top: auto;
 }
 
-.side-toolbar div.option-box-contact a svg{
+.side-toolbar div.option-box-contact a svg {
   width: 1.0em;
 }
 
@@ -374,23 +378,41 @@ body.darkmode {
   margin-top: 0.7rem;
 }
 
-.aside-name{
+
+/* github-heatmap */
+.github-heatmap {
+  overflow: scroll;
+  width: 100%;
+}
+
+.github-heatmap img {
+  box-shadow: none;
+  /* margin-left: -26em; */
+  max-width: none;
+}
+
+
+.aside-name {
   background-image: none !important;
 }
 
- .aside-name img{
+.aside-name img {
   box-shadow: none;
   width: 0.8em;
 }
 
-.content-inner{
+.content-inner {
   margin: 50px 50px 0px 2.0em;
   text-align: center;
   min-width: 12.0em;
   max-width: 18.0em;
 }
-
-.avatar{
+.content-inner-title {
+color: #424e5d;
+font-weight: bold;
+font-size: 1.2em;
+}
+.avatar {
   width: 30%;
   border-radius: 32%;
 }
@@ -406,7 +428,7 @@ body.darkmode {
   background-color: slategray;
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
 }
@@ -420,7 +442,9 @@ figure#top {
 .post-tag {
   display: flex;
 }
-.post-tag-item{
+
+.post-tag-item {
+  margin-bottom: 0.2em;
   line-height: 1;
   height: fit-content;
   width: fit-content;
@@ -430,26 +454,40 @@ figure#top {
   display: flex;
   justify-content: top;
   text-align: top;
-  background-color: #00de485c; /* defult*/
-  min-width: 0.5em; /* style = simble */
+  background-color: #00de485c;
+  /* defult*/
+  min-width: 0.5em;
+  /* style = simble */
 }
-.item-head{
+
+.item-head {
   width: 0.2em;
   border-radius: 0.5em;
-  background-color: #0fdc00; /* defult*/
+  background-color: #0fdc00;
+  /* defult*/
 }
-.item-text{
+
+.item-text {
   text-align: center;
   text-align: center;
   font-size: 0.8em;
   margin-left: 0.3em;
 }
 
+.aside-tags {
+  float: left;
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 1.0em;
+}
+
+
 /* pc */
 @media (min-width: 550px) {
   body {
     flex-direction: row;
   }
+
   .posisi {
     text-align: right;
   }
@@ -469,11 +507,12 @@ figure#top {
   body {
     flex-direction: column;
   }
+
   /* .content-inner{
     display: none;
   } */
   .container {
     margin: 0 auto;
     padding: 0 10%;
-}
+  }
 }
