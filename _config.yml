@@ -1,5 +1,5 @@
 #title in header
-title: '<span style="color: rgba(255, 211, 0, 1)">[<span style="color: rgba(255, 0, 0, 1)">zzerX</span>@<span style="color: rgba(0, 255, 0, 0.8)">cnblogs</span> <span>~</span> ]:</span>'
+title: '<span style="color: rgba(255, 211, 0, 1)">[<span style="color: rgba(255, 0, 0, 1)">zzerX</span>@<span style="color: rgba(0, 255, 0, 0.8)">blog</span> <span>~</span> ]:</span>'
 
 #main info
 #owner
@@ -41,6 +41,7 @@ pixiv: https://www.pixiv.net/users/11023636
 # instagram: https://instagram.com/adisaktijrs
 # stackoverflow: https://stackoverflow.com/story/tobiasreithmeier
 beian_info: 桂公网安备 45010502000772号
+my_frok: https://github.com/0x7A7A6572/hexo-theme-minima
 
 #左边侧栏
 sidebar: 
@@ -83,23 +84,41 @@ content_inner:
    name: zzerX
    motto: "✨Everything that drowns me makes me wanna fly."
 
-#github热力图
-github_heatmap:
-  enable: false
-  user: "0x7A7A6572"
-  hexcolor: 03adfc
+
 
 #tag显示配置
 post_tag:
    enable: true
-   style: "defult" # defult or simble(only display color)
+   aside_tag_enable: true
+   style: "simble" # defult or simble(only display color)
    bind_color:
-     tagname1: 0fdc00
      lua: b900dc
      java: dc0f00
      js: 0FA0CE
      linux: dc550f
      h5: 00bedc
      termux: 2b2b2b
+     html: FF33EB
+     android: FFE600
+     git: 6600FF
+
+#github热力图
+github_heatmap:
+  enable: false
+  user: "0x7A7A6572"
+  hexcolor: 03adfc
+
+#文章日历热力图
+postCalendar: 
+  enable: true
+  title: "文章日历"
+  titleColor: 3C4858
+  range: 5
+  visualMapColor: ["'#d5d5d5'", "'#c6e48b'", "'#7bc96f'","'#239a3b'","'#196127'"]
+  visualMapCategories: [0, 1, 2, 3, 4]
 
 
+libs:
+  js:
+    echarts: https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js
+    jquery: 

@@ -126,19 +126,21 @@
   <script src="/js/search.min.js" defer></script>
   <% } %>
 
+
 </head>
 
 <body>
+
   <nav class="content-inner">
     <!-- || document.body.offsetWidth >= 500 -->
-    <% if (!is_post()  ) { %>
+
     <%- partial('partial/content_inner') %>
-    <% } %> 
+
   </nav>
   <div class="container">
     <div class="row">
       <div>
-        <figure id="top" ></figure>
+        <figure id="top"></figure>
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>
@@ -150,17 +152,25 @@
     </div>
     <%- partial('partial/side_toolbar') %>
   </div>
-  <script src="<%- theme.nanobar %>"></script>
+  <!-- <script src="<%- theme.nanobar %>"></script> -->
+  <script>
+    document.onreadystatechange = adjustLayout; //当页面加载状态改变的时候执行这个方法.
+    function adjustLayout() {
+      /* mobille 界面不隐藏content_inner 改为自动上滑*/
+      if (document.readyState == "complete" && <%- !is_home() %>) 
+      toTop();
+    }
+  </script>
 
   <script>
-    var options = {
-      classname: 'nanobar',
-      id: 'myNanobar'
-    };
-    var nanobar = new Nanobar(options);
-    nanobar.go(30);
-    nanobar.go(76);
-    nanobar.go(100);
+    // var options = {
+    //   classname: 'nanobar',
+    //   id: 'myNanobar'
+    // };
+    // var nanobar = new Nanobar(options);
+    // nanobar.go(30);
+    // nanobar.go(76);
+    // nanobar.go(100);
   </script>
 
 </body>
