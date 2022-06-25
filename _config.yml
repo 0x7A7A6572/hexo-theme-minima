@@ -3,7 +3,7 @@ title: '<span style="color: rgba(255, 211, 0, 1)">[<span style="color: rgba(255,
 
 #main info
 #owner
-owner: "欢迎来到我的博客！"
+owner: ""
 # email: zzerx@qq.com
 info: "Everything that drowns me makes me wanna fly."
 #description
@@ -13,7 +13,7 @@ desc: ""
 menu:
   # Works: /Works
   创作: /Artwork
-  开发: /DevApp
+  开发: /apps
   关于: /About
 
 #index/main page max show posts (in number)
@@ -52,7 +52,7 @@ sidebar:
   conversation_link: http://wpa.qq.com/msgrd?v=3&uin=2623385294&site=qq&menu=yes
   community: 
     github: https://github.com/0x7A7A6572
-    bilibili: https://space.bilibili.com/3740018
+    # bilibili: https://space.bilibili.com/3740018
     pixiv: https://www.pixiv.net/users/11023636
     
 
@@ -101,6 +101,8 @@ post_tag:
      html: FF33EB
      android: FFE600
      git: 6600FF
+     element: 008fdd
+     vue: 0fdc00
 
 #github热力图
 github_heatmap:
@@ -110,7 +112,7 @@ github_heatmap:
 
 #文章日历热力图
 postCalendar: 
-  enable: true
+  enable: false
   title: "文章日历"
   titleColor: 3C4858
   range: 5
@@ -122,3 +124,13 @@ libs:
   js:
     echarts: https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js
     jquery: 
+
+
+#留言板系统
+messageBoard:
+  enable: true
+  owner: "0x7A7A6572"
+  repo: MessageBoard
+  oauth:
+    client_id: d6a47979b8d54944ecac
+    client_secret: 2ae9b7a5ebb3ff9fa1a061c6925baff3397a26c4

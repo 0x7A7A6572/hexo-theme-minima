@@ -19,7 +19,7 @@
     <a class="svg-hov defult-a" href="/tags/<%- tag.name.replace(" ","-")  %>">
     <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
       <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
-      <span class="item-text"><%- tag.name %></span>
+      <span class="item-text"><%- tag.name %>  (<%- tag.length %>)</span>
     </div>
     </a>
     <% }) %>
@@ -30,9 +30,12 @@
     <%- partial('post-calendar') %>
   <% } %>
 
-
 <% if(theme.github_heatmap.enable) { %>
   <div class="github-heatmap">
     <img  src="https://ghchart.rshah.org/<%- theme.github_heatmap.hexcolor%>/<%- theme.github_heatmap.user%>" alt="<%- theme.github_heatmap.user%>'s Github chart" />
   </div>
 <% } %>
+
+<!-- <% if (theme.messageBoard.enable) { %>
+  <%- partial('partial/message_board') %>
+<% } %> -->
