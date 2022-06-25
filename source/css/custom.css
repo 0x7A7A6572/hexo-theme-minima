@@ -29,6 +29,13 @@
 
 /* font-display: swap; Add font-display */
 /* } */
+/* @font-face {
+  font-family: 'DOS-437';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dos-437-2.ttf');
+  font-display: swap;
+} */
 
 html {
   overflow: auto;
@@ -246,9 +253,10 @@ a.footer-link:focus {
   transition: all .2s ease-in-out;
 
 }
+
 .defult-a {
-text-decoration-color: #000000 !important;
- background-image: none !important;
+  text-decoration-color: #000000 !important;
+  background-image: none !important;
 }
 
 .hexo {
@@ -407,27 +415,46 @@ body.darkmode {
   min-width: 12.0em;
   max-width: 18.0em;
 }
+
 .content-inner-title {
-color: #424e5d;
-font-weight: bold;
-font-size: 1.2em;
+  color: #424e5d;
+  font-weight: bold;
+  font-size: 1.2em;
 }
+
 .avatar {
-  width: 30%;
-  border-radius: 32%;
+  /* width: 30%; */
+  border-radius: 50%;
+  margin-bottom: -5em;
+  /* z-index: -1;*/
+}
+
+h3.name {
+  color: #f9e137;
+  font-weight: bold;
+  /* font-family: emoji; */
 }
 
 .profile {
   border-radius: 1.0em;
   background-color: #f1eeee;
   padding: 1.0em;
+  font-size: smaller;
+  /* white-space: nowrap; */
+  overflow: overlay;
   font-weight: bold;
+  position: relative;
+  box-shadow: 0 0 13px rgb(0 0 0 / 60%);
 }
 
 .profile.darkmode {
   background-color: slategray;
 }
 
+.blog-head-name{
+  /* font-family:'DOS-437' */
+  font-weight: bold;
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -480,7 +507,8 @@ figure#top {
   flex-flow: wrap;
   margin-bottom: 1.0em;
 }
-.post-desc{
+
+.post-desc {
   font-size: 0.5em;
   color: grey;
 }
