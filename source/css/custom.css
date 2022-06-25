@@ -454,7 +454,7 @@ figure#top {
   display: flex;
   justify-content: top;
   text-align: top;
-  background-color: #00de485c;
+  background-color: #c8cfca5c;
   /* defult*/
   min-width: 0.5em;
   /* style = simble */
@@ -480,7 +480,10 @@ figure#top {
   flex-flow: wrap;
   margin-bottom: 1.0em;
 }
-
+.post-desc{
+  font-size: 0.5em;
+  color: grey;
+}
 
 /* pc */
 @media (min-width: 550px) {

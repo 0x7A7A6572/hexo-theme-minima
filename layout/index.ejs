@@ -23,6 +23,10 @@
       <%- post.title %>
       <% } %>
     </a>
+    <p class="post-desc">
+      <%- post.content.replace(/<[^>]+>/g, "").substring(0,80) %> 
+    </p>
+
     <% if (post.tags.length > 0) { %>
     <div class="post-tag">
       <% post.tags.map((tag) => { %>
