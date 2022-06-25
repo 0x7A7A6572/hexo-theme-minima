@@ -126,11 +126,3 @@ libs:
     jquery: 
 
 
-#留言板系统
-messageBoard:
-  enable: true
-  owner: "0x7A7A6572"
-  repo: MessageBoard
-  oauth:
-    client_id: d6a47979b8d54944ecac
-    client_secret: 2ae9b7a5ebb3ff9fa1a061c6925baff3397a26c4
