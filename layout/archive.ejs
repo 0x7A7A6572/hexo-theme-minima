@@ -21,9 +21,9 @@
               <% post.tags.map((tag) => { %>
               <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
                 <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
-                <% if (theme.post_tag.style != "simble") { %>
+                <!-- % if (theme.post_tag.style != "simble") {  在所有博客页面不隐藏好一点-->
                 <span class="item-text"><%- tag.name %></span>
-                <% } %>
+                <!--  } % -->
               </div>
               <% }) %>
             </div>
