@@ -9,13 +9,21 @@
 
 <h4>最近</h4>
 
-<% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
+<% site.posts.sort('top', 'date').limit(theme.max_post).forEach(function(post){ %>
 <div class="row">
 
   <div class="three columns left lit">
     <p class="bottom"><%- full_date(post.date, 'll') %></p>
   </div>
   <div class="nine columns left mb-3">
+
+      <% if(post.top){ %>
+        <span style="color:grey;">置顶</span>
+        <span class="post-meta-divider">|</span>
+      <% } %>
+
+
+
     <a href="<%- url_for(post.path) %>">
       <% if (post.title == "") { %>
       no title

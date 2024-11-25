@@ -41,6 +41,7 @@ pixiv: https://www.pixiv.net/users/11023636
 # instagram: https://instagram.com/adisaktijrs
 # stackoverflow: https://stackoverflow.com/story/tobiasreithmeier
 beian_info: 桂公网安备 45010502000772号
+beian_icp: 桂ICP备2022004458号-1
 my_frok: https://github.com/0x7A7A6572/hexo-theme-minima
 
 #左边侧栏
@@ -80,7 +81,7 @@ disqus_shortname: https-adisaktijrs-github-io
 #content-inner
 content_inner:
    enable: true
-   avatar: https://zzerx.cn/Artwork/art/illustration/illustration2.png
+   avatar: /Artwork/art/illustration/illustration2.png
    name: "0x7A7A"
    motto: "✨Everything that drowns me makes me wanna fly."
 
@@ -106,7 +107,7 @@ post_tag:
 
 #github热力图
 github_heatmap:
-  enable: false
+  enable: true
   user: "0x7A7A6572"
   hexcolor: 03adfc
 

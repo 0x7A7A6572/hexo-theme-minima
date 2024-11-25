@@ -38,8 +38,12 @@
         <a href="<%= config.root %>">主页</a>
         <% for (name in theme.menu) { %>
           <% if (theme.menu[name]) { %>
+          <% if ( name == "创作") { %>
+             <a href="<%- url_for(theme.menu[name]) %>" class="ml _arts"><%- name %></a>
+<% }else{ %> 
           <a href="<%- url_for(theme.menu[name]) %>" class="ml"><%- name %></a>
-          <% } %>
+<% } %>         
+ <% } %>
         <% } %>
         <% if (theme.email) { %>
           <% if (typeof obfuscate === "function") { %>

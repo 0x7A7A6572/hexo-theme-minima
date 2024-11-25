@@ -395,7 +395,7 @@ body.darkmode {
 
 .github-heatmap img {
   box-shadow: none;
-  /* margin-left: -26em; */
+  margin-left: -26em;
   max-width: none;
 }
 
@@ -509,7 +509,7 @@ figure#top {
 }
 
 .post-desc {
-  font-size: 0.5em;
+  font-size: 0.8em;
   color: grey;
 }
 
@@ -532,6 +532,20 @@ figure#top {
   }
 
 }
+a._arts {
+   color: #f9c23c;
+   margin-left: 20px;
+ /* background: linear-gradient(45deg, #ff7b3d, #00ffb5ad); */
+   font-weight: bold;
+   text-decoration-color: #f9c23c !important;
+   background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 50%, #f9c23c 50% ) !important;
+ }
+
+a._arts::before {
+    content: "✨";
+ }
+
+
 
 /* mobile */
 @media (max-width: 550px) {
