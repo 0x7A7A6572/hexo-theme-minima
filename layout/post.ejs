@@ -1,7 +1,7 @@
   <h2><%- page.title %></h2>
 
   <%- page.content%>
-  <p><%- list_tags(page.tags, {class: 'classtest', show_count: false, style: false}) %> — <%- full_date(page.date, 'll') %></p>
+  <p><%- list_tags(page.tags, {class: 'classtest', show_count: false, style: false}) %> — <%- full_date(page.date, 'YYYY /  MM/DD') %></p>
   <%- partial('partial/comments') %>
   
   <% if (config.messageBoard.enable) { %>

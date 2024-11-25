@@ -1,38 +1,55 @@
+<script>
+  function getThemeStatus() {
+    if (localStorage.getItem('preferredTheme') == 'dark') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+</script>
 <% if(theme.content_inner.avatar) { %>
 <img class="avatar" src="<%- theme.content_inner.avatar%>" alt="<%- theme.content_inner.name%>'s Github chart" />
 <h3 class="name"><%- theme.content_inner.name%>
   <a class="aside-name" href="/admin">
-  <img src="<%- url_for("images/admin.png") %>"/>
-</a></h3>
+    <img src="<%- url_for("images/admin.png") %>" />
+  </a>
+</h3>
 <div class="column">
-  <!-- Main information, edit it on theme/_config.yml -->
-  <p class="mb-2"><%= theme.owner %></p>
-  <p class="profile" id="motto"><%= theme.content_inner.motto %></p>
-  <p><%= theme.desc %></p>
+  <p class="mb-2">
+    <%= theme.owner %>
+  </p>
+  <!-- <p class="profile" id="motto"><%= theme.content_inner.motto %></p> -->
+  <p>
+    <%= theme.desc %>
+  </p>
 </div>
 <% } %>
 
 <% if(theme.post_tag.aside_tag_enable) { %>
-<p class="content-inner-title">标签</p>
+<!-- <p class="content-inner-title">标签</p> -->
 <div class="aside-tags">
-  <% site.tags.map((tag) => { %>
-    <a class="svg-hov defult-a" href="/tags/<%- tag.name.replace(" ","-")  %>">
+  <% site.tags.map((tag)=> { %>
+  <a class="svg-hov defult-a" href="/tags/<%- tag.name.replace(" "," -") %>">
     <div class="post-tag-item" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>5c;">
       <div class="item-head" style="background-color:#<%- theme.post_tag.bind_color[tag.name] %>;"></div>
-      <span class="item-text"><%- tag.name %>  (<%- tag.length %>)</span>
+      <span class="item-text"><%- tag.name %> (<%- tag.length %>)</span>
     </div>
-    </a>
-    <% }) %>
+  </a>
+  <% }) %>
 </div>
 <% } %>
 
-  <% if (theme.postCalendar.enable) { %>
-    <%- partial('post-calendar') %>
-  <% } %>
+<% if (theme.postCalendar.enable) { %>
+<%- partial('post-calendar') %>
+<% } %>
+
+
+<div class="github-stats-used"></div>
+<div class="github-stats-starts"></div>
+
 
 <% if(theme.github_heatmap.enable) { %>
-  <div class="github-heatmap">
-    <img  src="https://ghchart.rshah.org/<%- theme.github_heatmap.hexcolor%>/<%- theme.github_heatmap.user%>" alt="<%- theme.github_heatmap.user%>'s Github chart" />
-  </div>
+<div class="github-heatmap">
+  <img src="https://ghchart.rshah.org/<%- theme.github_heatmap.hexcolor%>/<%- theme.github_heatmap.user%>" alt="<%- theme.github_heatmap.user%>'s Github chart" />
+</div>
 <% } %>
- 

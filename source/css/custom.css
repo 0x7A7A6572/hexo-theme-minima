@@ -49,8 +49,11 @@ img {
   margin-bottom: 1%;
 }
 
-@media (min-width: 550px) {
+img.none-shadow {
+  box-shadow: none;
+}
 
+@media (min-width: 550px) {
   /*
   Side by side gallery
   use with </> alignment
@@ -201,7 +204,7 @@ body.darkmode code:not(pre code) {
 
 /* blockquote */
 blockquote {
-  font-family: 'Inter';
+  font-family: "Inter";
   background-color: rgba(148, 148, 149, 0.08);
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
@@ -209,7 +212,7 @@ blockquote {
 }
 
 blockquote footer {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 16px;
   padding-bottom: 10px;
   margin-top: -10px;
@@ -245,13 +248,12 @@ a.footer-link:focus {
 }
 
 .svg-hov {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .svg-hov:hover {
   transform: translateY(-3px);
-  transition: all .2s ease-in-out;
-
+  transition: all 0.2s ease-in-out;
 }
 
 .defult-a {
@@ -266,7 +268,7 @@ a.footer-link:focus {
 }
 
 .github {
-  fill: #63636F;
+  fill: #63636f;
 }
 
 .linkedin {
@@ -278,15 +280,15 @@ a.footer-link:focus {
 }
 
 .bilibili {
-  fill: #ee768c
+  fill: #ee768c;
 }
 
 .twitter {
-  fill: #1DA1F2;
+  fill: #1da1f2;
 }
 
 .instagram {
-  fill: #E4405F
+  fill: #e4405f;
 }
 
 .stackoverflow {
@@ -347,9 +349,6 @@ body.darkmode {
   text-align: center;
 }
 
-
-
-
 .side-toolbar {
   position: fixed;
   left: 0px;
@@ -359,7 +358,7 @@ body.darkmode {
   flex-direction: column;
   font-size: 1.5em;
   width: 10%;
-  max-width: 2.0em;
+  max-width: 2em;
 }
 
 .side-toolbar a.option-box,
@@ -379,13 +378,12 @@ body.darkmode {
 }
 
 .side-toolbar div.option-box-contact a svg {
-  width: 1.0em;
+  width: 1em;
 }
 
 .ml-sidebar {
   margin-top: 0.7rem;
 }
-
 
 /* github-heatmap */
 .github-heatmap {
@@ -395,10 +393,37 @@ body.darkmode {
 
 .github-heatmap img {
   box-shadow: none;
-  margin-left: -26em;
+  /* margin-left: -26em; */
   max-width: none;
 }
 
+.darkmode .github-heatmap img {
+  filter: invert(1);
+}
+
+.github-stats-used {
+  width: 272px;
+  height: 150px;
+  background-size: contain;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-image: url(https://github-readme-stats.vercel.app/api/top-langs/?username=0x7A7A6572&layout=compact);
+}
+.darkmode .github-stats-used {
+  background-image: url(https://github-readme-stats.vercel.app/api/top-langs/?username=0x7A7A6572&layout=compact&theme=tokyonight&time=01);
+}
+
+.github-stats-starts {
+  width: 272px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  background-image: url(https://github-readme-stats.vercel.app/api?username=0x7A7A6572&show_icons=true);
+}
+.darkmode .github-stats-starts {
+  background-image: url(https://github-readme-stats.vercel.app/api?username=0x7A7A6572&show_icons=true&theme=tokyonight&time=01);
+}
 
 .aside-name {
   background-image: none !important;
@@ -410,10 +435,13 @@ body.darkmode {
 }
 
 .content-inner {
-  margin: 50px 50px 0px 2.0em;
+  margin: 50px 50px 0px 2em;
   text-align: center;
-  min-width: 12.0em;
-  max-width: 18.0em;
+  min-width: 12em;
+  max-width: 18em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content-inner-title {
@@ -425,8 +453,25 @@ body.darkmode {
 .avatar {
   /* width: 30%; */
   border-radius: 50%;
-  margin-bottom: -5em;
+  /* margin-bottom: -5em; */
   /* z-index: -1;*/
+  width: 30%;
+  /* margin-bottom: -5em; */
+  /* box-shadow: 2px 2px 36px #b90000; */
+  /* background: linear-gradient(73deg, #610003, #002831); */
+  /* z-index: -1; */
+  /* padding: 0; */
+  /* background: radial-gradient(#000000 40%, #00000000); */
+  box-sizing: border-box;
+  width: 46%;
+  /* margin: auto; */
+  background-image: url(http://localhost:4000/Artwork/art/illustration/illustration2.png);
+  /* background-blend-mode: multiply; */
+  mask: radial-gradient(circle at center, #4a4a4a 42%, transparent 70%);
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  /* padding: 20px; */
 }
 
 h3.name {
@@ -436,9 +481,9 @@ h3.name {
 }
 
 .profile {
-  border-radius: 1.0em;
+  border-radius: 1em;
   background-color: #f1eeee;
-  padding: 1.0em;
+  padding: 1em;
   font-size: smaller;
   /* white-space: nowrap; */
   overflow: overlay;
@@ -451,7 +496,7 @@ h3.name {
   background-color: slategray;
 }
 
-.blog-head-name{
+.blog-head-name {
   /* font-family:'DOS-437' */
   font-weight: bold;
 }
@@ -502,10 +547,10 @@ figure#top {
 }
 
 .aside-tags {
-  float: left;
+  /* float: left; */
   display: flex;
   flex-flow: wrap;
-  margin-bottom: 1.0em;
+  margin-bottom: 1em;
 }
 
 .post-desc {
@@ -530,22 +575,23 @@ figure#top {
   #madewith {
     text-align: left;
   }
-
 }
 a._arts {
-   color: #f9c23c;
-   margin-left: 20px;
- /* background: linear-gradient(45deg, #ff7b3d, #00ffb5ad); */
-   font-weight: bold;
-   text-decoration-color: #f9c23c !important;
-   background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 50%, #f9c23c 50% ) !important;
- }
+  color: #f9c23c;
+  margin-left: 20px;
+  /* background: linear-gradient(45deg, #ff7b3d, #00ffb5ad); */
+  font-weight: bold;
+  text-decoration-color: #f9c23c !important;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    #f9c23c 50%
+  ) !important;
+}
 
 a._arts::before {
-    content: "✨";
- }
-
-
+  content: "✨";
+}
 
 /* mobile */
 @media (max-width: 550px) {
